@@ -24,6 +24,18 @@ public class Library
         return _books.FirstOrDefault(i => i.Title == title);
     }
 
+    public void deleteUser(Guid id){
+        User userToBeDelete = _users.FirstOrDefault(i => i.id == id);
+        _users.Remove(userToBeDelete);
+        Console.WriteLine($"User Successfully deleted");
+    }
+
+    public void deleteBook(Guid id){
+        Book bookToBeDelete = _books.FirstOrDefault(i => i.id == id);
+        _books.Remove(bookToBeDelete);
+        Console.WriteLine($"Book Successfully deleted");
+    }
+
     public void displayUsers(){
         Console.WriteLine($"Users");
         
