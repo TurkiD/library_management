@@ -1,21 +1,12 @@
-public class Book
+public class Book : LibraryData
 {
-    public string Id
+   public string Title
     {
         get;
         private set;
     }
-    public string Title
+    public Book(string title, DateTime? createdDate = null) : base(createdDate)
     {
-        get;
-        private set;
-    }
-    public DateTime Date { get; }
-
-    public Book(string id, string title, DateTime date = default)
-    {
-        Id = id;
         Title = title;
-        Date = date == default ? DateTime.Now : date;
     }
 }

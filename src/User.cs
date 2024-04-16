@@ -1,21 +1,13 @@
-public class User
+public class User : LibraryData
 {
-    public string Id
-    {
-        get;
-        private set;
-    }
     public string Name
     {
         get;
         private set;
     }
-    public DateTime Date { get; }
 
-    public User(string id, string name, DateTime date = default)
+    public User(string name, DateTime? createdDate = null) : base(createdDate)
     {
-        Id = id;
         Name = name;
-        Date = date == default ? DateTime.Now : date;
     }
 }
