@@ -10,4 +10,9 @@ public class User : LibraryData
     {
         Name = name;
     }
+
+    public override string ToString()
+    {
+        return $" - {Name}, {createdDate}";
+    }
 }

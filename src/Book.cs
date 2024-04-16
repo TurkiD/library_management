@@ -9,4 +9,9 @@ public class Book : LibraryData
     {
         Title = title;
     }
+
+    public override string ToString()
+    {
+        return $" - {Title}, {createdDate}";
+    }
 }

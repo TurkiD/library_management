@@ -1,11 +1,11 @@
 public abstract class LibraryData
 {
-    public Guid Id;
-    public DateTime CreatedDate;
+    public Guid id;
+    public DateTime createdDate;
 
-    public LibraryData(DateTime? createdDate = null)
+    public LibraryData(DateTime? date = null)
     {
-        Id = Guid.NewGuid();
-        CreatedDate = createdDate ?? DateTime.Now;
+        id = Guid.NewGuid();
+        createdDate = date ?? DateTime.Now;
     }
 }
