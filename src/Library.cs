@@ -23,4 +23,21 @@ public class Library
     public Book findBookByTitle(string title) {
         return _books.FirstOrDefault(i => i.Title == title);
     }
+
+    public void displayUsers(){
+        Console.WriteLine($"Users");
+        
+        foreach (var user in _users)
+        {
+            Console.WriteLine($"{user}");
+        }
+    }
+
+    public void displayBooks(){
+        Console.WriteLine($"Books");
+        foreach (var book in _books)
+        {
+            Console.WriteLine($"{book}");
+        }
+    }
 }
