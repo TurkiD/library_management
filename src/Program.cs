@@ -69,11 +69,11 @@
         library.addBook(book19);
         library.addBook(book20);
 
-        library.displayUsers();
-        library.displayBooks();
+        // library.displayUsers();
+        // library.displayBooks();
 
         library.deleteUser(user1.id);
 
-        library.displayUsers();
+        // library.displayUsers();
     }
 }
