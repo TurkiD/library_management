@@ -74,6 +74,16 @@
 
         library.deleteUser(user1.id);
 
+        var allUsers = library.getAllUsers(1, 5);
+        foreach (var user in allUsers)
+        {
+            Console.WriteLine($"{user}"); 
+        }
+        var allBooks = library.getAllBooks(1, 5);
+        foreach (var book in allBooks)
+        {
+            Console.WriteLine($"{book}"); 
+        }
         // library.displayUsers();
     }
 }

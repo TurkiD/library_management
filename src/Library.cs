@@ -45,30 +45,13 @@ public class Library
 
     public List<Book> getAllBooks(int pageNumber, int limitPerPage)
     {
-        return _books.Skip((pageNumber - 1) * limitPerPage).Take(limitPerPage).ToList();
+        Console.WriteLine($"Page number {pageNumber}");
+        return _books.OrderByDescending(book => book.createdDate).Skip((pageNumber - 1) * limitPerPage).Take(limitPerPage).ToList();
     }
 
-    public List<Book> getAllUsers(int pageNumber, int limitPerPage)
+    public List<User> getAllUsers(int pageNumber, int limitPerPage)
     {
-        return _books.Skip((pageNumber - 1) * limitPerPage).Take(limitPerPage).ToList();
+        Console.WriteLine($"Page number {pageNumber}");
+        return _users.OrderByDescending(user => user.createdDate).Skip((pageNumber - 1) * limitPerPage).Take(limitPerPage).ToList();
     }
-
-    // public void displayUsers()
-    // {
-    //     Console.WriteLine($"Users");
-
-    //     foreach (var user in _users)
-    //     {
-    //         Console.WriteLine($"{user}");
-    //     }
-    // }
-
-    // public void displayBooks()
-    // {
-    //     Console.WriteLine($"Books");
-    //     foreach (var book in _books)
-    //     {
-    //         Console.WriteLine($"{book}");
-    //     }
-    // }
 }
