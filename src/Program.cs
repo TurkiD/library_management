@@ -35,55 +35,65 @@
         var book19 = new Book("The Iliad");
         var book20 = new Book("Anna Karenina");
 
-        var library = new Library();
+        // var library = new Library();
 
-        library.addUser(user1);
-        library.addUser(user2);
-        library.addUser(user3);
-        library.addUser(user4);
-        library.addUser(user5);
-        library.addUser(user6);
-        library.addUser(user7);
-        library.addUser(user8);
-        library.addUser(user9);
-        library.addUser(user10);
+        var emailService = new EmailNotificationService();
+        var smsService = new SMSNotificationService();
 
-        library.addBook(book1);
-        library.addBook(book2);
-        library.addBook(book3);
-        library.addBook(book4);
-        library.addBook(book5);
-        library.addBook(book6);
-        library.addBook(book7);
-        library.addBook(book8);
-        library.addBook(book9);
-        library.addBook(book10);
-        library.addBook(book11);
-        library.addBook(book12);
-        library.addBook(book13);
-        library.addBook(book14);
-        library.addBook(book15);
-        library.addBook(book16);
-        library.addBook(book17);
-        library.addBook(book18);
-        library.addBook(book19);
-        library.addBook(book20);
+        var libraryWithEmail = new Library(emailService);
+        var libraryWithSMS = new Library(smsService);
+
+        libraryWithEmail.addBook(book1);
+        libraryWithEmail.addUser(user1);
+        libraryWithSMS.addUser(user1);
+
+        // library.addUser(user1);
+        // library.addUser(user2);
+        // library.addUser(user3);
+        // library.addUser(user4);
+        // library.addUser(user5);
+        // library.addUser(user6);
+        // library.addUser(user7);
+        // library.addUser(user8);
+        // library.addUser(user9);
+        // library.addUser(user10);
+
+        // library.addBook(book1);
+        // library.addBook(book2);
+        // library.addBook(book3);
+        // library.addBook(book4);
+        // library.addBook(book5);
+        // library.addBook(book6);
+        // library.addBook(book7);
+        // library.addBook(book8);
+        // library.addBook(book9);
+        // library.addBook(book10);
+        // library.addBook(book11);
+        // library.addBook(book12);
+        // library.addBook(book13);
+        // library.addBook(book14);
+        // library.addBook(book15);
+        // library.addBook(book16);
+        // library.addBook(book17);
+        // library.addBook(book18);
+        // library.addBook(book19);
+        // library.addBook(book20);
 
         // library.displayUsers();
         // library.displayBooks();
 
-        library.deleteUser(user1.id);
+        // library.deleteUser(user1.id);
 
-        var allUsers = library.getAllUsers(1, 5);
-        foreach (var user in allUsers)
-        {
-            Console.WriteLine($"{user}"); 
-        }
-        var allBooks = library.getAllBooks(1, 5);
-        foreach (var book in allBooks)
-        {
-            Console.WriteLine($"{book}"); 
-        }
+        // var allUsers = library.getAllUsers(1, 5);
+        // foreach (var user in allUsers)
+        // {
+        //     Console.WriteLine($"{user}"); 
+        // }
+        // var allBooks = library.getAllBooks(1, 5);
+        // foreach (var book in allBooks)
+        // {
+        //     Console.WriteLine($"{book}"); 
+        // }
         // library.displayUsers();
     }
 }
